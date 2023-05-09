@@ -16,5 +16,26 @@ namespace Agenda
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntAddContato_Click(object sender, EventArgs e)
+        {
+            Contato objetocontato = new Contato();
+            lstContatos.Itens.Add(objetoContato.Tostring());
+        }
     }
 }
