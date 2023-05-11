@@ -37,6 +37,8 @@
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.bntAddContato = new System.Windows.Forms.Button();
             this.istContatos = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -70,6 +72,7 @@
             this.label3.Size = new System.Drawing.Size(58, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefone";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtNome
             // 
@@ -99,7 +102,7 @@
             this.bntAddContato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bntAddContato.Font = new System.Drawing.Font("News706 BT", 9F, System.Drawing.FontStyle.Bold);
             this.bntAddContato.ForeColor = System.Drawing.Color.Black;
-            this.bntAddContato.Location = new System.Drawing.Point(70, 160);
+            this.bntAddContato.Location = new System.Drawing.Point(70, 203);
             this.bntAddContato.Name = "bntAddContato";
             this.bntAddContato.Size = new System.Drawing.Size(212, 23);
             this.bntAddContato.TabIndex = 6;
@@ -110,10 +113,30 @@
             // istContatos
             // 
             this.istContatos.FormattingEnabled = true;
-            this.istContatos.Location = new System.Drawing.Point(331, 42);
+            this.istContatos.Location = new System.Drawing.Point(334, 36);
             this.istContatos.Name = "istContatos";
             this.istContatos.Size = new System.Drawing.Size(120, 147);
             this.istContatos.TabIndex = 7;
+            this.istContatos.SelectedIndexChanged += new System.EventHandler(this.istContatos_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("News706 BT", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(71, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Email";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(182, 168);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // Form1
             // 
@@ -121,6 +144,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(534, 450);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.istContatos);
             this.Controls.Add(this.bntAddContato);
             this.Controls.Add(this.txtTelefone);
@@ -129,6 +153,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Agenda";
@@ -147,6 +172,8 @@
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Button bntAddContato;
         private System.Windows.Forms.ListBox istContatos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
 

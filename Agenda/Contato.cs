@@ -11,6 +11,7 @@ namespace Agenda
         private string primeiroNome;
         private string sobreNome;
         private string telefone;
+        private string email;
 
         public string PrimeiroNome
         {
@@ -37,18 +38,24 @@ namespace Agenda
                 }
             }
         }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
         public Contato()
         {
             PrimeiroNome = "Ana";
             sobreNome = "Santos";
-            Telefone = "11-6666-6666";
+            Telefone = "0012345678";
+            Email = "@hotmail";
         }
-        public Contato(string primeiroNome, string sobreNome, string telefoneome, string telefone)
+        public Contato(string primeiroNome, string sobreNome,  string telefone, string email)
         {
             PrimeiroNome = primeiroNome;
             SobreNome = sobreNome;
             Telefone = telefone;
-            
+            Email = email;
         }
         public override string ToString()
         {
@@ -58,7 +65,9 @@ namespace Agenda
                  Telefone.Substring(0, 1),
                  Telefone.Substring(2, 6),
                  Telefone.Substring(7, 10));
-
+            saida += " ";
+            saida += string.Format("{0}", Email) ;
+            return saida;
         }
     }
 }

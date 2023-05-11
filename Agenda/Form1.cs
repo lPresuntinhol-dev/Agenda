@@ -34,8 +34,28 @@ namespace Agenda
 
         private void bntAddContato_Click(object sender, EventArgs e)
         {
-            Contato objetocontato = new Contato();
-            lstContatos.Itens.Add(objetoContato.Tostring());
+            Contato objetocontato = new Contato(txtNome.Text,txtSobrenome.Text,txtTelefone.Text,txtEmail.Text);
+            istContatos.Items .Add(objetocontato.ToString());
+        }
+
+        private void istContatos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
